@@ -18,6 +18,8 @@ export class AppComponent {
   markerOptions3: { icon: google.maps.Icon; };
   position2: { lat: number; lng: number; };
   position3: { lat: number; lng: number; };
+  vertices: google.maps.LatLngLiteral[];
+  vertices2: google.maps.LatLngLiteral[] = [];
   constructor() {
     this.center = { lat: 45.506738, lng: 9.190766 };
     this.position = this.center;
@@ -48,6 +50,20 @@ export class AppComponent {
     }
 
     this.markerOptions3 = { icon: iconData3 }
+
+    this.vertices = [
+      { lat: this.center.lat + 0.001, lng: this.center.lng - 0.002 },
+      { lat: this.center.lat, lng: this.center.lng },
+      { lat: this.center.lat - 0.001, lng: this.center.lng - 0.002 }
+    ];
+
+    this.vertices2= [
+      { lat: 45.507338, lng: 9.190766 },
+      { lat: 45.507338, lng: 9.191966 },
+      { lat: 45.506038, lng: 9.191966 },
+      { lat: 45.506038, lng: 9.190766 }
+    ];
+    
 
 
   }
