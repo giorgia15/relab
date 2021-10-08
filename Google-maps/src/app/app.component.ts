@@ -14,6 +14,7 @@ export class AppComponent {
   label: string;
   circleOptions: { fillColor: string; };
   circleOptions2: { fillColor: string; };
+  circleOptions3: { fillColor: string; };
   markerOptions2: { icon: google.maps.Icon; };
   markerOptions3: { icon: google.maps.Icon; };
   position2: { lat: number; lng: number; };
@@ -28,6 +29,7 @@ export class AppComponent {
     this.label = "ciao";
     this.circleOptions = { fillColor: 'red' }
     this.circleOptions2 = { fillColor: 'blue' }
+    this.circleOptions3 = { fillColor: 'green' }
 
     let iconData: google.maps.Icon = {
       url: './assets/img/cat_acrobat.ico',
@@ -57,13 +59,13 @@ export class AppComponent {
       { lat: this.center.lat - 0.001, lng: this.center.lng - 0.002 }
     ];
 
-    this.vertices2= [
+    this.vertices2 = [
       { lat: 45.507338, lng: 9.190766 },
       { lat: 45.507338, lng: 9.191966 },
       { lat: 45.506038, lng: 9.191966 },
       { lat: 45.506038, lng: 9.190766 }
     ];
-    
+
 
 
   }
@@ -78,4 +80,14 @@ export class AppComponent {
     this.circleOptions = { fillColor: 'orange' }
   }
 
+  yellow() {
+    this.circleOptions3 = { fillColor: 'yellow' }
+  }
+
+  grey() {
+    this.circleOptions3 = { fillColor: 'grey' }
+  }
+  pink() {
+    this.circleOptions3 = { fillColor: 'pink' }
+  }
 }

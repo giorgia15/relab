@@ -20,10 +20,23 @@
   <map-polygon [paths]="vertices">
   </map-polygon>
 
-  <map-polygon [paths]="vertices2">
+  <map-polygon [paths]="vertices2" [options]='circleOptions3'>
   </map-polygon>
 
 </google-map>
+<br/>
+<br/>
+<label> CERCHIO PICCOLO </label>
+<br/>
+<br/>
 <button (click)="purple()">purple</button>
 <button (click)="green()">green</button>
 <button (click)="orange()">orange</button>
+<br/>
+<br/>
+<label> RETTANGOLO</label>
+<br/>
+<br/>
+<button (click)="yellow()">yellow</button>
+<button (click)="grey()">grey</button>
+<button (click)="pink()">pink</button>
